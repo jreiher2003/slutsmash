@@ -1,0 +1,19 @@
+application: slutsmash
+version: 1
+runtime: php
+api_version: 1
+
+handlers:
+- url: /style
+  static_dir: style
+  mime_type: "text/css"
+
+- url: /images
+  static_dir: images
+  mime_type: image/png
+
+- url: /scripts
+  static_dir: scripts
+
+- url: /.*
+  script: index.php
