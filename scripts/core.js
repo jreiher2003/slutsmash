@@ -41,11 +41,20 @@ $( document ).ready(function() {
 
   showHome();
 
-  $( document ).on( 'click', 'button.play', function() {
-    onPlay();
-  });
+  $( document ).on( 'click', 'button.play', function() {onPlay();});
 
   $( document ).on( 'click', '#gameover button.close', onGameOverClose );
 
   $( document ).on( 'mousedown', '#canvas', onGameCanvasMousedown );
+
+  FB.init({
+  appId: 267010486756539,
+  frictionlessRequests: true,
+  status: true,
+  version: 'v2.1'
+});
+
+FB.Event.subscribe('auth.authResponseChange', onAuthResponseChange);
+FB.Event.subscribe('auth.statusChange', onStatusChange);
+
 });
