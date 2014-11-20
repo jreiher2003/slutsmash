@@ -48,7 +48,7 @@ $( document ).ready(function() {
   $( document ).on( 'mousedown', '#canvas', onGameCanvasMousedown );
 
   FB.init({
-  appId: 267010486756539,
+  appId: '267010486756539',
   frictionlessRequests: true,
   status: true,
   version: 'v2.1'
